@@ -26,6 +26,9 @@ const config = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.js'],
+  },
 };
 
 module.exports = config;

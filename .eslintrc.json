@@ -20,6 +20,9 @@
   "plugins": ["react"],
   "rules": {
     "no-console": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "no-param-reassign": "off",
+    "array-callback-return": "off"
   }
 }

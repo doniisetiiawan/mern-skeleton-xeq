@@ -9,6 +9,7 @@ import helmet from 'helmet';
 import userRoutes from './routes/user.routes';
 import authRoutes from './routes/auth.routes';
 
+import template from '../template';
 import devBundle from './devBundle';
 
 const CURRENT_WORKING_DIR = process.cwd();
@@ -27,6 +28,10 @@ app.use(
   '/dist',
   express.static(path.join(CURRENT_WORKING_DIR, 'dist')),
 );
+
+app.get('/', (req, res) => {
+  res.status(200).send(template());
+});
 
 app.use('/', userRoutes);
 app.use('/', authRoutes);

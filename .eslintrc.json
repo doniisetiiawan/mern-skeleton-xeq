@@ -25,6 +25,8 @@
     "no-param-reassign": "off",
     "array-callback-return": "off",
     "no-restricted-syntax": "warn",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "no-shadow": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

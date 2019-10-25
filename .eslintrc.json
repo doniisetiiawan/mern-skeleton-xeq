@@ -24,6 +24,7 @@
     "consistent-return": "off",
     "no-param-reassign": "off",
     "array-callback-return": "off",
-    "no-restricted-syntax": "warn"
+    "no-restricted-syntax": "warn",
+    "import/no-extraneous-dependencies": "off"
   }
 }

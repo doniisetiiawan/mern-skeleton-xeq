@@ -23,6 +23,7 @@
     "no-underscore-dangle": "off",
     "consistent-return": "off",
     "no-param-reassign": "off",
-    "array-callback-return": "off"
+    "array-callback-return": "off",
+    "no-restricted-syntax": "warn"
   }
 }

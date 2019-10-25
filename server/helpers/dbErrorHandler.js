@@ -6,15 +6,18 @@ const getUniqueErrorMessage = (err) => {
       err.message.lastIndexOf('_1'),
     );
     output = `${fieldName.charAt(0).toUpperCase()
-      + fieldName.slice(1)} already exists`;
+      + fieldName.slice(1)
+    } already exists`;
   } catch (ex) {
     output = 'Unique field already exists';
   }
+
   return output;
 };
 
 const getErrorMessage = (err) => {
   let message = '';
+
   if (err.code) {
     switch (err.code) {
       case 11000:
@@ -25,10 +28,11 @@ const getErrorMessage = (err) => {
         message = 'Something went wrong';
     }
   } else {
-    err.errors.forEach((errName) => {
+    for (const errName in err.errors) {
       if (err.errors[errName].message) message = err.errors[errName].message;
-    });
+    }
   }
+
   return message;
 };
 

@@ -11,9 +11,10 @@ const auth = {
     if (typeof window !== 'undefined') sessionStorage.setItem('jwt', JSON.stringify(jwt));
     cb();
   },
-  signout(cb) {
+  clearJWT(cb) {
     if (typeof window !== 'undefined') sessionStorage.removeItem('jwt');
     cb();
+    // optional
     signout().then(() => {
       document.cookie = 't=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     });

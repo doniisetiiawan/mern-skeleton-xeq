@@ -25,3 +25,5 @@ yarn-error.log*
 .idea/
 .cache/
 dist/
+
+client/t.js
